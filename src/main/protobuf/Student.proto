@@ -1,0 +1,19 @@
+syntax = "proto2";// 语法
+
+package io.dzh.netty.f_protobuf;
+
+option optimize_for = SPEED; // 快速构建
+//option java_package = "io.dzh.netty.g_protobufexample.f_protobuf"; // java 的包名
+option java_package = "io.dzh.netty.g_protobufexample"; // java 的包名
+option java_outer_classname = "MyDataInfo"; // java 类名
+//option java_outer_classname = "DataInfo"; // java 类名
+
+message Person {
+//message Student {
+    // 数字标记字段用,可重复利用
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+// 生成代码命令
+// protoc --java_out=src\main\java  src\main\protobuf\Student.proto

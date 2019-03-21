@@ -1,0 +1,10 @@
+node_modules
+dist
+.idea
+.gradle
+build
+gen-java
+gen-py
+out
+
+

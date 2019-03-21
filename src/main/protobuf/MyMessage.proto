@@ -1,0 +1,46 @@
+syntax = "proto2";// 语法
+
+package io.dzh.netty.f_protobuf;
+
+option optimize_for = SPEED; // 快速构建
+//option java_package = "io.dzh.netty.g_protobufexample.f_protobuf"; // java 的包名
+option java_package = "io.dzh.netty.g_protobufexample"; // java 的包名
+//option java_outer_classname = "MyDataInfo"; // java 类名
+option java_outer_classname = "MyDataInfo"; // java 类名
+
+// 自定义多种消息类型
+message MyMessage {
+    enum DataType {
+        PersionTyp = 1;
+        DogType = 2;
+        CatType = 3;
+    }
+    required DataType data_type =1;
+    // oneof 只能设置一个对象,设置多个,后面的覆盖前面的,共享内存
+    oneof dataBody {
+        Person person = 2;
+        Dog dog = 3;
+        Cat cat =4;
+    }
+}
+
+
+message Person {
+    //message Student {
+    // 数字标记字段用,可重复利用
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+message Dog {
+    optional string name = 1;
+    optional int32 age = 2;
+}
+
+message Cat {
+    optional string name = 1;
+    optional string city = 2;
+}
+// 生成代码命令
+// protoc --java_out=src\main\java  src\main\protobuf\MyMessage.proto
