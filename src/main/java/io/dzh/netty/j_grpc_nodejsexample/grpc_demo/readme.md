@@ -1,0 +1,5 @@
+- 本项目是使用nodejs 实现grpc的一个简单的服务器与客户端,与java进行异构语言的远程调用
+- 启动client node app/grpcClient.js
+- 启动server node app/grpcServer.js
+- 启动client node app/grpcClientStatic.js
+- 启动server node app/grpcServerStatic.js
