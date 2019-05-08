@@ -14,10 +14,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class TestServer {
 
     public static void main(String[] args) throws Exception {
-
+        // 启动两个事件循环组, boss负责处理连接,worker具体通讯工作
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
+            // 助手类, 帮助启动
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).
                     childHandler(new TestServerInitializer());
