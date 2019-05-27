@@ -8,9 +8,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-//    maven {
-//        url 'http://maven.aliyun.com/nexus/content/groups/public/'
-//    }
+
+    mavenLocal()
     mavenCentral()
 
 
@@ -39,6 +38,7 @@ dependencies {
 // gradlew 默认使用用户目录下 ./gradle的gradle版本
 task wrapper (type: Wrapper){
     gradleVersion = '3.4'
+//    gradleVersion = '5.2.1'
     distributionType = 'all'
 }
 
