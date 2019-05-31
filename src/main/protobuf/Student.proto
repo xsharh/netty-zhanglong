@@ -3,8 +3,8 @@ syntax = "proto2";// 语法
 package io.dzh.netty.f_protobuf;
 
 option optimize_for = SPEED; // 快速构建
-//option java_package = "io.dzh.netty.g_protobufexample.f_protobuf"; // java 的包名
-option java_package = "io.dzh.netty.g_protobufexample"; // java 的包名
+//option java_package = "io.dzh.netty.g_protobuf_example.f_protobuf"; // java 的包名
+option java_package = "io.dzh.netty.g_protobuf_example"; // java 的包名
 option java_outer_classname = "MyDataInfo"; // java 类名
 //option java_outer_classname = "DataInfo"; // java 类名
 

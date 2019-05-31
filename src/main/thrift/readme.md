@@ -1,5 +1,5 @@
 ####　`` 基于thrift生成:java python 的服务端与客户端实现``
-> 服务定义在`io.dzh.netty.h_thriftexample`
+> 服务定义在`io.dzh.netty.h_thrift_example`
 
 > python 下载安装thrift的python依赖,
 >> 进入thrift/lib/py执行 sudo python setup.py install
